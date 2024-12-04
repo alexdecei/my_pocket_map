@@ -6,3 +6,32 @@ body {
     height: 100vh;
     width: 100%;
 }
+
+#download-markers {
+    position: fixed; /* Fixe le bouton en un endroit de l'écran */
+    top: 20px; /* Décalage depuis le haut */
+    right: 20px; /* Décalage depuis la droite */
+    z-index: 1000; /* Assure que le bouton reste au-dessus de la carte */
+    padding: 10px 20px; /* Espacement interne pour rendre le bouton plus esthétique */
+    background-color: #007bff; /* Couleur de fond (bleu) */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Arrondit les coins */
+    font-size: 16px; /* Taille du texte */
+    cursor: pointer; /* Change le curseur au survol */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet de relief */
+    transition: background-color 0.3s; /* Effet de transition pour le survol */
+}
+
+#download-markers:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+@media (max-width: 600px) {
+    #download-markers {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

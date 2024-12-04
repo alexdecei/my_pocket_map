@@ -24,7 +24,7 @@ export function removeMarker(id) {
 }
 
 // récupérer les markers 
-function exportMarkers() {
+export function exportMarkers() {
     // Crée une copie simplifiée des marqueurs
     const simplifiedMarkers = markerStore.map(marker => ({
         id: marker.id, // Si vous utilisez un ID unique
@@ -45,7 +45,7 @@ initialMarkers.forEach(markerData => {
     addMarker(markerData.lat, markerData.lng, markerData.info);
 });
 
-function downloadMarkers() {
+export function downloadMarkers() {
     // Crée une copie simplifiée des marqueurs
     const simplifiedMarkers = markerStore.map(marker => ({
         id: marker.id,
