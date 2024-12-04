@@ -9,7 +9,7 @@ const initialMarkers = [];
 export function addMarker(map, lat, lng, info) {
     const newMarker = new Marker(map, lat, lng, info);
     markerStore.push(newMarker);
-    console.log(markerStore)
+    exportMarkers()
     return newMarker;
 }
 
@@ -25,7 +25,7 @@ export function removeMarker(id) {
 }
 
 // récupérer les markers 
-function exportMarkers() {
+export function exportMarkers() {
     const markersJson = JSON.stringify(markerStore, null, 2); // Convertit en JSON bien formaté
     console.log(markersJson); // Affiche le JSON dans la console
 }
