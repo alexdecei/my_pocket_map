@@ -12,8 +12,8 @@ export class Marker {
         this.summary = summary;
         this.map = map;
 
-        // Définir les emoji pour chaque type
-        const iconMap = {
+        // Attacher iconMap à l'objet pour qu'il soit accessible dans toutes les méthodes
+        this.iconMap = {
             lieu: "🏔️",
             ville: "🏠",
             trésor: "💎",
@@ -21,7 +21,7 @@ export class Marker {
             événement: "⚡"
         };
 
-        const emoji = iconMap[type] || "❓"; // Emoji par défaut si le type est inconnu
+        const emoji = this.iconMap[type] || "❓"; // Emoji par défaut si le type est inconnu
 
         // Crée une icône personnalisée avec l'emoji
         const customIcon = L.divIcon({
