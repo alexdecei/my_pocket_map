@@ -15,12 +15,12 @@ export class Marker {
         this.marker = L.marker([lat, lng]).addTo(map);
         this.map = map;
 
-        // Attache une popup avec un bouton pour supprimer
-        this.marker.bindPopup(this.createPopup());
+        // Ajoute une popup enrichie
+        this.marker.bindPopup(this.createPopupContent());
     }
 
     // Créer le contenu de la popup
-    createPopup() {
+    createPopupContent() {
         return `
             <div>
                 <h3>${this.title}</h3>
