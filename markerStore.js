@@ -20,7 +20,7 @@ export function removeMarker(id) {
     if (index !== -1) {
         markerStore[index].remove(); // Supprime de la carte
         markerStore.splice(index, 1); // Supprime du tableau
-        console.log(`Marqueur ${id} supprimé.`);
+        //console.log(`Marqueur ${id} supprimé.`);
     }
 }
 
@@ -28,7 +28,7 @@ export function removeMarker(id) {
 export function editMarker(markerId) {
     const marker = markerStore.find(m => m.id === markerId);
     if (!marker) {
-        console.error("Marqueur introuvable");
+        //console.error("Marqueur introuvable");
         return;
     }
 
@@ -53,7 +53,7 @@ export function editMarker(markerId) {
         // Mettre à jour la popup
         marker.marker.bindPopup(marker.createPopupContent());
 
-        console.log(`Marqueur ${marker.id} modifié.`);
+       // console.log(`Marqueur ${marker.id} modifié.`);
 
         // Fermer la modale
         closeModal();
@@ -77,7 +77,7 @@ export function exportMarkers() {
     }));
 
     const markersJson = JSON.stringify(simplifiedMarkers, null, 2);
-    console.log(markersJson);
+    //console.log(markersJson);
 }
 
 
@@ -126,6 +126,6 @@ fetch('markers.json')
         });
     })
     .catch(error => {
-        console.error("Erreur lors du chargement des marqueurs :", error);
+        //console.error("Erreur lors du chargement des marqueurs :", error);
     });
 

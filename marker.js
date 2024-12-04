@@ -64,7 +64,7 @@ export class Marker {
         const newLatLng = this.marker.getLatLng();
         this.lat = newLatLng.lat;
         this.lng = newLatLng.lng;
-        console.log(`Marqueur déplacé : ${this.title}, Nouvelle position :`, newLatLng);
+        //console.log(`Marqueur déplacé : ${this.title}, Nouvelle position :`, newLatLng);
     }
 
     // Supprimer le marqueur de la carte

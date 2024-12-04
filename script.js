@@ -62,7 +62,7 @@ map.on('dblclick', function (e) {
             // Mettre à jour la popup du marqueur
             markerState.markerBeingEdited.marker.bindPopup(markerState.markerBeingEdited.createPopupContent());
     
-            console.log(`Marqueur ${markerState.markerBeingEdited.id} modifié.`);
+            //console.log(`Marqueur ${markerState.markerBeingEdited.id} modifié.`);
         } else {
             // Ajouter un nouveau marqueur
             addMarker(map, coords.lat, coords.lng, title, type, summary);
