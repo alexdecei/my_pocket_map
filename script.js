@@ -1,7 +1,7 @@
 import { addMarker, removeMarker, downloadMarkers } from './markerStore.js';
 
 // Initialisation de la carte
-const map = L.map('map', {
+export const map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: -2,
 });
