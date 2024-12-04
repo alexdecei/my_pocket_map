@@ -1,12 +1,3 @@
-
-Pour enrichir vos marqueurs avec des informations supplémentaires comme un titre, un type, et un résumé, voici comment adapter votre code et améliorer l'affichage.
-
-Étape 1 : Ajouter des Propriétés aux Marqueurs
-Modifiez la classe Marker pour inclure ces nouvelles propriétés.
-
-Mise à jour de marker.js :
-javascript
-Copier le code
 export class Marker {
     constructor(map, lat, lng, title = "Sans titre", type = "lieu", summary = "Pas de résumé", id = null) {
         if (!map || typeof map.addLayer !== "function") {
