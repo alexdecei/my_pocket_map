@@ -27,32 +27,61 @@ body {
     background-color: #0056b3; /* Couleur de fond au survol */
 }
 
-.leaflet-popup-content h3 {
-    margin: 0;
-    font-size: 18px;
+
+/* Conteneur principal de la popup */
+.popup-container {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
     color: #333;
 }
 
-.leaflet-popup-content p {
+/* Titre de la popup */
+.popup-title {
+    margin: 0;
+    font-size: 18px;
+    color: #007bff;
+    text-align: center;
+}
+
+/* Type d'objet dans la popup */
+.popup-type {
     margin: 5px 0;
     font-size: 14px;
     color: #555;
+    text-align: center;
 }
 
-.leaflet-popup-content button {
+/* Résumé dans la popup */
+.popup-summary {
+    margin: 10px 0;
+    font-size: 13px;
+    color: #666;
+    text-align: justify;
+}
+
+/* Section des actions (boutons) */
+.popup-actions {
+    text-align: center;
+}
+
+/* Bouton de la popup */
+.popup-button {
     display: inline-block;
     margin-top: 10px;
     padding: 5px 10px;
     font-size: 14px;
     color: #fff;
-    background-color: #007bff;
+    background-color: #dc3545;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
-.leaflet-popup-content button:hover {
-    background-color: #0056b3;
+/* Effet au survol */
+.popup-button:hover {
+    background-color: #c82333;
 }
 
 

@@ -21,12 +21,24 @@ export class Marker {
 
     // Créer le contenu de la popup
     createPopupContent() {
+        const iconMap = {
+            lieu: "📍",
+            ville: "🏠",
+            trésor: "💎",
+            boss: "🐉",
+            événement: "⚡"
+        };
+    
+        const icon = iconMap[this.type] || "❓"; // Icône par défaut si le type est inconnu
+    
         return `
-            <div>
-                <h3>${this.title}</h3>
-                <p><strong>Type :</strong> ${this.type}</p>
-                <p>${this.summary}</p>
-                <button onclick="removeMarker(${this.id})">Supprimer</button>
+            <div class="popup-container">
+                <h3 class="popup-title">${icon} ${this.title}</h3>
+                <p class="popup-type"><strong>Type :</strong> ${this.type}</p>
+                <p class="popup-summary">${this.summary}</p>
+                <div class="popup-actions">
+                    <button class="popup-button popup-delete" onclick="removeMarker(${this.id})">Supprimer</button>
+                </div>
             </div>
         `;
     }
