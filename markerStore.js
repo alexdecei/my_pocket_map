@@ -1,5 +1,5 @@
 import { Marker } from './marker.js';
-import { map, markerState, openModal, closeModal } from './script.js';
+import { map, markerState, openModal, closeModal, form } from './script.js';
 
 const markerStore = [];
 
@@ -33,9 +33,10 @@ export function editMarker(markerId) {
     }
 
     // Pré-remplir la modale avec les informations du marqueur
-    document.getElementById('marker-title').value = marker.title;
-    document.getElementById('marker-type').value = marker.type;
-    document.getElementById('marker-summary').value = marker.summary;
+    form.querySelector('#marker-title').value = marker.title;
+    form.querySelector('#marker-type').value = marker.type;
+    form.querySelector('#marker-summary').value = marker.summary;
+
 
     // Gérer la soumission du formulaire pour enregistrer les modifications
     form.onsubmit = function (event) {

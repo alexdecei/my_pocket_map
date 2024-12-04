@@ -1,8 +1,8 @@
-import { addMarker, removeMarker, downloadMarkers, editMarker } from './markerStore.js';
+import { addMarker, removeMarker, downloadMarkers, editMarker, form } from './markerStore.js';
 
 // Références aux éléments HTML
 const modal = document.getElementById('marker-form-modal');
-const form = document.getElementById('marker-form');
+export const form = document.getElementById('marker-form');
 const cancelButton = document.getElementById('cancel-button');
 const saveButton = document.getElementById('save-button');
 
