@@ -9,6 +9,8 @@ const initialMarkers = [];
 export function addMarker(map, lat, lng, info) {
     const newMarker = new Marker(map, lat, lng, info);
     markerStore.push(newMarker);
+    console.log("lat : ", lat)
+    console.log("lng : ", lng)
     return newMarker;
 }
 
