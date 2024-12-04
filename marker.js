@@ -33,7 +33,7 @@ export class Marker {
 
         // Crée le marqueur avec l'icône initiale
         this.marker = L.marker([lat, lng], {
-            icon: this.createIcon()
+            icon: this.createIcon(), draggable: true
         }).addTo(map);
 
 
