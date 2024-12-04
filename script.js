@@ -1,4 +1,4 @@
-import { addMarker, removeMarker, downloadMarkers, exportMarkers } from './markerStore.js';
+import { addMarker, removeMarker, downloadMarkers } from './markerStore.js';
 
 // Initialisation de la carte
 const map = L.map('map', {
