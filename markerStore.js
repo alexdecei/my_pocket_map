@@ -39,12 +39,6 @@ export function exportMarkers() {
 }
 
 
-
-// Charger les marqueurs initiaux
-initialMarkers.forEach(markerData => {
-    addMarker(markerData.lat, markerData.lng, markerData.info);
-});
-
 export function downloadMarkers() {
     // Crée une copie simplifiée des marqueurs
     const simplifiedMarkers = markerStore.map(marker => ({
@@ -63,3 +57,25 @@ export function downloadMarkers() {
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
 }
+
+
+/////////////////////////////////////////////////////
+
+// Charger les marqueurs depuis le fichier markers.json
+fetch('markers.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Erreur lors du chargement de markers.json : ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Parcourir les marqueurs et les ajouter à la carte
+        data.forEach(markerData => {
+            addMarker(markerData.lat, markerData.lng, markerData.info);
+        });
+    })
+    .catch(error => {
+        console.error("Erreur lors du chargement des marqueurs :", error);
+    });
+
