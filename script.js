@@ -6,6 +6,9 @@ const form = document.getElementById('marker-form');
 const cancelButton = document.getElementById('cancel-button');
 const saveButton = document.getElementById('save-button');
 
+// une référence globale pour suivre le marqueur en cours d’édition
+let markerBeingEdited = null;
+
 // Ouvrir la modale
 function openModal() {
     modal.style.display = 'flex';
@@ -41,21 +44,38 @@ map.on('dblclick', function (e) {
     // Gérer la soumission du formulaire
     form.onsubmit = function (event) {
         event.preventDefault(); // Empêcher le rechargement de la page
-
+    
         // Récupérer les valeurs saisies
         const title = document.getElementById('marker-title').value;
         const type = document.getElementById('marker-type').value;
         const summary = document.getElementById('marker-summary').value;
-
-        // Ajouter le marqueur avec les informations
-        addMarker(map, coords.lat, coords.lng, title, type, summary);
-
-        // Fermer la modale
+    
+        if (markerBeingEdited) {
+            // Modifier les informations du marqueur
+            markerBeingEdited.title = title;
+            markerBeingEdited.type = type;
+            markerBeingEdited.summary = summary;
+    
+            // Mettre à jour la popup du marqueur
+            markerBeingEdited.marker.bindPopup(markerBeingEdited.createPopupContent());
+    
+            console.log(`Marqueur ${markerBeingEdited.id} modifié.`);
+        } else {
+            // Ajouter un nouveau marqueur
+            addMarker(map, coords.lat, coords.lng, title, type, summary);
+        }
+    
+        // Fermer la modale et réinitialiser l'état
         closeModal();
+        markerBeingEdited = null;
     };
+    
 
     // Gérer le bouton d'annulation
-    cancelButton.onclick = closeModal;
+    cancelButton.onclick = function () {
+        closeModal();
+        markerBeingEdited = null;
+    };
 });
 
 // Rendre la fonction `removeMarker` disponible globalement
@@ -63,3 +83,5 @@ window.removeMarker = removeMarker;
 
 //DL marquers
 document.getElementById('download-markers').addEventListener('click', downloadMarkers);
+
+

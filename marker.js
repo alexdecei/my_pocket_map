@@ -48,7 +48,10 @@ export class Marker {
                 <h3 class="popup-title">${this.title}</h3>
                 <p><strong>Type :</strong> ${this.type}</p>
                 <p>${this.summary}</p>
-                <button onclick="removeMarker(${this.id})">Supprimer</button>
+                <div class="popup-actions">
+                    <button class="popup-button popup-edit" onclick="editMarker(${this.id})">Modifier</button>
+                    <button class="popup-button popup-delete" onclick="removeMarker(${this.id})">Supprimer</button>
+                </div>
             </div>
         `;
     }
@@ -65,4 +68,25 @@ export class Marker {
     remove() {
         this.marker.remove();
     }
+    
+}
+
+//modifier le contenu du marqueur
+function editMarker(markerId) {
+    // Trouver le marqueur correspondant
+    const marker = markerStore.find(m => m.id === markerId);
+    if (!marker) {
+        console.error("Marqueur introuvable");
+        return;
+    }
+
+    markerBeingEdited = marker; // Stocker le marqueur en cours d'édition
+
+    // Pré-remplir les champs de la modale avec les informations du marqueur
+    document.getElementById('marker-title').value = marker.title;
+    document.getElementById('marker-type').value = marker.type;
+    document.getElementById('marker-summary').value = marker.summary;
+
+    // Ouvrir la modale
+    openModal();
 }
