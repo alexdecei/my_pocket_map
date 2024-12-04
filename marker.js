@@ -55,7 +55,6 @@ export class Marker {
             </div>
         `;
     }
-
     // Gérer la fin du déplacement
     onDragEnd() {
         const newLatLng = this.marker.getLatLng();
