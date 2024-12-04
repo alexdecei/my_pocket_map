@@ -1,5 +1,5 @@
 import { Marker } from './marker.js';
-import { map, markerState, openModal } from './script.js';
+import { map, markerState, openModal, closeModal } from './script.js';
 
 const markerStore = [];
 
@@ -32,17 +32,36 @@ export function editMarker(markerId) {
         return;
     }
 
-    // Modifier la propriété markerBeingEdited
-    markerState.markerBeingEdited = marker;
-
     // Pré-remplir la modale avec les informations du marqueur
     document.getElementById('marker-title').value = marker.title;
     document.getElementById('marker-type').value = marker.type;
     document.getElementById('marker-summary').value = marker.summary;
 
+    // Gérer la soumission du formulaire pour enregistrer les modifications
+    form.onsubmit = function (event) {
+        event.preventDefault(); // Empêcher le rechargement de la page
+
+        // Mettre à jour les informations du marqueur
+        marker.title = document.getElementById('marker-title').value;
+        marker.type = document.getElementById('marker-type').value;
+        marker.summary = document.getElementById('marker-summary').value;
+
+        // Mettre à jour l'icône du marqueur
+        marker.updateIcon();
+
+        // Mettre à jour la popup
+        marker.marker.bindPopup(marker.createPopupContent());
+
+        console.log(`Marqueur ${marker.id} modifié.`);
+
+        // Fermer la modale
+        closeModal();
+    };
+
     // Ouvrir la modale
     openModal();
 }
+
 
 
 // récupérer les markers 

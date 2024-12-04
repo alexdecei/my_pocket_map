@@ -18,7 +18,7 @@ export function openModal() {
 }
 
 // Fermer la modale
-function closeModal() {
+export function closeModal() {
     modal.style.display = 'none';
     form.reset(); // Réinitialiser le formulaire
 }

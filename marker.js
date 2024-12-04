@@ -31,8 +31,11 @@ export class Marker {
             iconAnchor: [15, 15] // Ancre de l'icône au centre
         });
 
-        // Crée le marqueur Leaflet avec l'icône personnalisée
-        this.marker = L.marker([lat, lng], { icon: customIcon, draggable: true }).addTo(map);
+        // Crée le marqueur avec l'icône initiale
+        this.marker = L.marker([lat, lng], {
+            icon: this.createIcon()
+        }).addTo(map);
+
 
         // Ajoute une popup enrichie
         this.marker.bindPopup(this.createPopupContent());
@@ -67,6 +70,22 @@ export class Marker {
     // Supprimer le marqueur de la carte
     remove() {
         this.marker.remove();
+    }
+
+    // Créer une icône personnalisée
+    createIcon() {
+        const emoji = this.iconMap[this.type] || "❓"; // Emoji par défaut si le type est inconnu
+        return L.divIcon({
+            className: 'custom-marker-icon',
+            html: `<div class="emoji-icon">${emoji}</div>`,
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+        });
+    }
+
+    // Mettre à jour l'icône
+    updateIcon() {
+        this.marker.setIcon(this.createIcon());
     }
     
 }
