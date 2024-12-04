@@ -1,4 +1,4 @@
-import { addMarker, removeMarker, downloadMarkers, editMarker, form } from './markerStore.js';
+import { addMarker, removeMarker, downloadMarkers, editMarker } from './markerStore.js';
 
 // Références aux éléments HTML
 const modal = document.getElementById('marker-form-modal');
