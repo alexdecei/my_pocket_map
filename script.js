@@ -13,7 +13,7 @@ export const markerState = {
 
 
 // Ouvrir la modale
-function openModal() {
+export function openModal() {
     modal.style.display = 'flex';
 }
 
