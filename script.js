@@ -1,4 +1,4 @@
-import { addMarker, removeMarker } from './markerStore.js';
+import { addMarker, removeMarker, downloadMarkers } from './markerStore.js';
 
 // Initialisation de la carte
 const map = L.map('map', {
@@ -21,3 +21,6 @@ map.on('click', function (e) {
 
 // Rendre la fonction `removeMarker` disponible globalement
 window.removeMarker = removeMarker;
+
+//DL marquers
+document.getElementById('download-markers').addEventListener('click', downloadMarkers);
