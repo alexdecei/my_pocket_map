@@ -14,10 +14,10 @@ export class Marker {
 
         // Définir les emoji pour chaque type
         const iconMap = {
-            lieu: "📍",
+            lieu: "🏔️",
             ville: "🏠",
             trésor: "💎",
-            boss: "🐉",
+            défi: "⚔️",
             événement: "⚡"
         };
 
@@ -32,10 +32,13 @@ export class Marker {
         });
 
         // Crée le marqueur Leaflet avec l'icône personnalisée
-        this.marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
+        this.marker = L.marker([lat, lng], { icon: customIcon, draggable: true }).addTo(map);
 
         // Ajoute une popup enrichie
         this.marker.bindPopup(this.createPopupContent());
+
+        // Écoute l'événement "dragend" (fin de déplacement)
+        this.marker.on('dragend', this.onDragEnd.bind(this));
     }
 
     // Créer le contenu de la popup
@@ -48,6 +51,14 @@ export class Marker {
                 <button onclick="removeMarker(${this.id})">Supprimer</button>
             </div>
         `;
+    }
+
+    // Gérer la fin du déplacement
+    onDragEnd() {
+        const newLatLng = this.marker.getLatLng();
+        this.lat = newLatLng.lat;
+        this.lng = newLatLng.lng;
+        console.log(`Marqueur déplacé : ${this.title}, Nouvelle position :`, newLatLng);
     }
 
     // Supprimer le marqueur de la carte
