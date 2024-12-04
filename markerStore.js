@@ -2,10 +2,7 @@ import { Marker } from './marker.js';
 
 const markerStore = [];
 
-const initialMarkers = [
-    { lat: 500, lng: 500, info: "Point d'intérêt 1" },
-    { lat: 400, lng: 400, info: "Point d'intérêt 2" },
-];
+const initialMarkers = [];
 
 
 // Ajouter un marqueur
