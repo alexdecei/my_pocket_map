@@ -1,16 +1,142 @@
-  [
+[
     {
-        "lat": 1144.7788132596688,
-        "lng": 2879.545866707028,
-        "title": "Cité interdite",
-        "type": "ville",
-        "summary": "Une ancienne cité perdue regorgeant de secrets oubliés."
+        "lat": 1080.909998,
+        "lng": 2803.273658,
+        "title": "Marqueur 1",
+        "type": "boss",
+        "summary": "Un ennemi puissant à affronter."
     },
     {
-        "lat": 1104.7788132596688,
-        "lng": 2809.545866707028,
-        "title": "Château mystérieux",
+        "lat": 1091.734541,
+        "lng": 2896.091574,
+        "title": "Marqueur 2",
         "type": "lieu",
-        "summary": "Un château abandonné rempli de mystères."
+        "summary": "Un endroit mystérieux à explorer."
+    },
+    {
+        "lat": 1139.757441,
+        "lng": 2811.148139,
+        "title": "Marqueur 3",
+        "type": "événement",
+        "summary": "Un lieu où un événement significatif s'est produit."
+    },
+    {
+        "lat": 1095.527526,
+        "lng": 2846.977517,
+        "title": "Marqueur 4",
+        "type": "ville",
+        "summary": "Un lieu habité avec une riche histoire."
+    },
+    {
+        "lat": 1071.860781,
+        "lng": 2717.025368,
+        "title": "Marqueur 5",
+        "type": "événement",
+        "summary": "Un lieu où un événement significatif s'est produit."
+    },
+    {
+        "lat": 1089.244131,
+        "lng": 2859.495684,
+        "title": "Marqueur 6",
+        "type": "événement",
+        "summary": "Un lieu où un événement significatif s'est produit."
+    },
+    {
+        "lat": 1130.439951,
+        "lng": 2813.007902,
+        "title": "Marqueur 7",
+        "type": "boss",
+        "summary": "Un ennemi puissant à affronter."
+    },
+    {
+        "lat": 1135.192678,
+        "lng": 2842.391954,
+        "title": "Marqueur 8",
+        "type": "événement",
+        "summary": "Un lieu où un événement significatif s'est produit."
+    },
+    {
+        "lat": 1116.288116,
+        "lng": 2877.47502,
+        "title": "Marqueur 9",
+        "type": "ville",
+        "summary": "Un lieu habité avec une riche histoire."
+    },
+    {
+        "lat": 1073.264254,
+        "lng": 2832.499385,
+        "title": "Marqueur 10",
+        "type": "ville",
+        "summary": "Un lieu habité avec une riche histoire."
+    },
+    {
+        "lat": 1132.330769,
+        "lng": 2859.809584,
+        "title": "Marqueur 11",
+        "type": "trésor",
+        "summary": "Un trésor caché regorgeant de richesses."
+    },
+    {
+        "lat": 1149.486463,
+        "lng": 2787.291507,
+        "title": "Marqueur 12",
+        "type": "trésor",
+        "summary": "Un trésor caché regorgeant de richesses."
+    },
+    {
+        "lat": 1061.864302,
+        "lng": 2887.258588,
+        "title": "Marqueur 13",
+        "type": "ville",
+        "summary": "Un lieu habité avec une riche histoire."
+    },
+    {
+        "lat": 1072.122541,
+        "lng": 2744.098781,
+        "title": "Marqueur 14",
+        "type": "lieu",
+        "summary": "Un endroit mystérieux à explorer."
+    },
+    {
+        "lat": 1098.811749,
+        "lng": 2865.589876,
+        "title": "Marqueur 15",
+        "type": "événement",
+        "summary": "Un lieu où un événement significatif s'est produit."
+    },
+    {
+        "lat": 1146.378293,
+        "lng": 2855.574769,
+        "title": "Marqueur 16",
+        "type": "trésor",
+        "summary": "Un trésor caché regorgeant de richesses."
+    },
+    {
+        "lat": 1147.762619,
+        "lng": 2843.848421,
+        "title": "Marqueur 17",
+        "type": "ville",
+        "summary": "Un lieu habité avec une riche histoire."
+    },
+    {
+        "lat": 1135.257988,
+        "lng": 2768.307699,
+        "title": "Marqueur 18",
+        "type": "lieu",
+        "summary": "Un endroit mystérieux à explorer."
+    },
+    {
+        "lat": 1128.895613,
+        "lng": 2768.989815,
+        "title": "Marqueur 19",
+        "type": "lieu",
+        "summary": "Un endroit mystérieux à explorer."
+    },
+    {
+        "lat": 1092.927486,
+        "lng": 2821.485699,
+        "title": "Marqueur 20",
+        "type": "trésor",
+        "summary": "Un trésor caché regorgeant de richesses."
     }
 ]
