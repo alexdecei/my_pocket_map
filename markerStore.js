@@ -7,11 +7,9 @@ const initialMarkers = [];
 
 
 // Ajouter un marqueur
-export function addMarker(map, lat, lng, info) {
-    const newMarker = new Marker(map, lat, lng, info);
+export function addMarker(map, lat, lng, title = "Sans titre", type = "lieu", summary = "Pas de résumé") {
+    const newMarker = new Marker(map, lat, lng, title, type, summary);
     markerStore.push(newMarker);
-    console.log("lat : ", lat)
-    console.log("lng : ", lng)
     return newMarker;
 }
 
@@ -28,38 +26,40 @@ export function removeMarker(id) {
 
 // récupérer les markers 
 export function exportMarkers() {
-    // Crée une copie simplifiée des marqueurs
     const simplifiedMarkers = markerStore.map(marker => ({
-        id: marker.id, // Si vous utilisez un ID unique
+        id: marker.id,
         lat: marker.lat,
         lng: marker.lng,
-        info: marker.info
+        title: marker.title,
+        type: marker.type,
+        summary: marker.summary
     }));
 
-    // Convertir en JSON et afficher dans la console
     const markersJson = JSON.stringify(simplifiedMarkers, null, 2);
     console.log(markersJson);
 }
 
 
+
 export function downloadMarkers() {
-    // Crée une copie simplifiée des marqueurs
     const simplifiedMarkers = markerStore.map(marker => ({
         id: marker.id,
         lat: marker.lat,
         lng: marker.lng,
-        info: marker.info
+        title: marker.title,
+        type: marker.type,
+        summary: marker.summary
     }));
 
-    // Préparer les données JSON pour le téléchargement
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(simplifiedMarkers, null, 2));
     const downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
     downloadAnchorNode.setAttribute("download", "markers.json");
-    document.body.appendChild(downloadAnchorNode); // Nécessaire pour Firefox
+    document.body.appendChild(downloadAnchorNode);
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
 }
+
 
 
 /////////////////////////////////////////////////////
@@ -73,9 +73,15 @@ fetch('markers.json')
         return response.json();
     })
     .then(data => {
-        // Parcourir les marqueurs et les ajouter à la carte
         data.forEach(markerData => {
-            addMarker(map, markerData.lat, markerData.lng, markerData.info);
+            addMarker(
+                map,
+                markerData.lat,
+                markerData.lng,
+                markerData.title,
+                markerData.type,
+                markerData.summary
+            );
         });
     })
     .catch(error => {

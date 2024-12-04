@@ -1,14 +1,16 @@
-[
+  [
     {
-      "id": 1733326450732,
-      "lat": 1772.3990813287123,
-      "lng": 3883.195497692859,
-      "info": "Nouvelle info"
+        "lat": 1144.7788132596688,
+        "lng": 2879.545866707028,
+        "title": "Cité interdite",
+        "type": "ville",
+        "summary": "Une ancienne cité perdue regorgeant de secrets oubliés."
     },
     {
-      "id": 1733326467726,
-      "lat": 1144.7788132596688,
-      "lng": 2879.545866707028,
-      "info": "ok"
+        "id": 1733326450732,
+        "lat": 1772.3990813287123,
+        "title": "Château mystérieux",
+        "type": "lieu",
+        "summary": "Un château abandonné rempli de mystères."
     }
-  ]
+]
