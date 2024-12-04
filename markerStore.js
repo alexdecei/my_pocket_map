@@ -9,7 +9,6 @@ const initialMarkers = [];
 export function addMarker(map, lat, lng, info) {
     const newMarker = new Marker(map, lat, lng, info);
     markerStore.push(newMarker);
-    exportMarkers()
     return newMarker;
 }
 
@@ -25,9 +24,18 @@ export function removeMarker(id) {
 }
 
 // récupérer les markers 
-export function exportMarkers() {
-    const markersJson = JSON.stringify(markerStore, null, 2); // Convertit en JSON bien formaté
-    console.log(markersJson); // Affiche le JSON dans la console
+function exportMarkers() {
+    // Crée une copie simplifiée des marqueurs
+    const simplifiedMarkers = markerStore.map(marker => ({
+        id: marker.id, // Si vous utilisez un ID unique
+        lat: marker.lat,
+        lng: marker.lng,
+        info: marker.info
+    }));
+
+    // Convertir en JSON et afficher dans la console
+    const markersJson = JSON.stringify(simplifiedMarkers, null, 2);
+    console.log(markersJson);
 }
 
 
@@ -37,8 +45,17 @@ initialMarkers.forEach(markerData => {
     addMarker(markerData.lat, markerData.lng, markerData.info);
 });
 
-export function downloadMarkers() {
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(markerStore, null, 2));
+function downloadMarkers() {
+    // Crée une copie simplifiée des marqueurs
+    const simplifiedMarkers = markerStore.map(marker => ({
+        id: marker.id,
+        lat: marker.lat,
+        lng: marker.lng,
+        info: marker.info
+    }));
+
+    // Préparer les données JSON pour le téléchargement
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(simplifiedMarkers, null, 2));
     const downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
     downloadAnchorNode.setAttribute("download", "markers.json");
