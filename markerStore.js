@@ -24,6 +24,27 @@ export function removeMarker(id) {
     }
 }
 
+//modifier le contenu du marqueur
+export function editMarker(markerId) {
+    // Trouver le marqueur correspondant
+    const marker = markerStore.find(m => m.id === markerId);
+    if (!marker) {
+        console.error("Marqueur introuvable");
+        return;
+    }
+
+    markerBeingEdited = marker; // Stocker le marqueur en cours d'édition
+
+    // Pré-remplir les champs de la modale avec les informations du marqueur
+    document.getElementById('marker-title').value = marker.title;
+    document.getElementById('marker-type').value = marker.type;
+    document.getElementById('marker-summary').value = marker.summary;
+
+    // Ouvrir la modale
+    openModal();
+}
+
+
 // récupérer les markers 
 export function exportMarkers() {
     const simplifiedMarkers = markerStore.map(marker => ({
