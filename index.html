@@ -12,5 +12,33 @@
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script type="module" src="script.js"></script>
+
+    <div id="marker-form-modal" class="modal">
+        <div class="modal-content">
+            <h2>Ajouter un nouveau marqueur</h2>
+            <form id="marker-form">
+                <label for="marker-title">Titre :</label>
+                <input type="text" id="marker-title" placeholder="Entrez un titre" required />
+    
+                <label for="marker-type">Type :</label>
+                <select id="marker-type">
+                    <option value="lieu">Lieu</option>
+                    <option value="ville">Ville</option>
+                    <option value="trésor">Trésor</option>
+                    <option value="boss">Boss</option>
+                    <option value="événement">Événement</option>
+                </select>
+    
+                <label for="marker-summary">Résumé :</label>
+                <textarea id="marker-summary" placeholder="Entrez un résumé"></textarea>
+    
+                <div class="modal-actions">
+                    <button type="button" id="cancel-button">Annuler</button>
+                    <button type="submit" id="save-button">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
 </body>
 </html>
