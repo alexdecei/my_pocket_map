@@ -40,7 +40,7 @@ initialMarkers.forEach(markerData => {
     addMarker(markerData.lat, markerData.lng, markerData.info);
 });
 
-function downloadMarkers() {
+export function downloadMarkers() {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(markerStore, null, 2));
     const downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
