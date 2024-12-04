@@ -193,3 +193,12 @@ body {
 .emoji-icon {
     line-height: 1;
 }
+
+.popup-edit {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.popup-edit:hover {
+    background-color: #e0a800;
+}
