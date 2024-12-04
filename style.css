@@ -172,3 +172,24 @@ body {
         font-size: 14px;
     }
 }
+
+
+/* Icône personnalisée */
+.custom-marker-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Taille de l'emoji */
+    font-weight: bold;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent */
+    border-radius: 50%; /* Icône circulaire */
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc; /* Bordure fine */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Effet d'ombre */
+}
+
+.emoji-icon {
+    line-height: 1;
+}

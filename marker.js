@@ -10,17 +10,9 @@ export class Marker {
         this.title = title;
         this.type = type;
         this.summary = summary;
-
-        // Crée le marqueur Leaflet
-        this.marker = L.marker([lat, lng]).addTo(map);
         this.map = map;
 
-        // Ajoute une popup enrichie
-        this.marker.bindPopup(this.createPopupContent());
-    }
-
-    // Créer le contenu de la popup
-    createPopupContent() {
+        // Définir les emoji pour chaque type
         const iconMap = {
             lieu: "📍",
             ville: "🏠",
@@ -28,23 +20,38 @@ export class Marker {
             boss: "🐉",
             événement: "⚡"
         };
-    
-        const icon = iconMap[this.type] || "❓"; // Icône par défaut si le type est inconnu
-    
+
+        const emoji = iconMap[type] || "❓"; // Emoji par défaut si le type est inconnu
+
+        // Crée une icône personnalisée avec l'emoji
+        const customIcon = L.divIcon({
+            className: 'custom-marker-icon',
+            html: `<div class="emoji-icon">${emoji}</div>`,
+            iconSize: [30, 30], // Taille de l'icône
+            iconAnchor: [15, 15] // Ancre de l'icône au centre
+        });
+
+        // Crée le marqueur Leaflet avec l'icône personnalisée
+        this.marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
+
+        // Ajoute une popup enrichie
+        this.marker.bindPopup(this.createPopupContent());
+    }
+
+    // Créer le contenu de la popup
+    createPopupContent() {
         return `
             <div class="popup-container">
-                <h3 class="popup-title">${icon} ${this.title}</h3>
-                <p class="popup-type"><strong>Type :</strong> ${this.type}</p>
-                <p class="popup-summary">${this.summary}</p>
-                <div class="popup-actions">
-                    <button class="popup-button popup-delete" onclick="removeMarker(${this.id})">Supprimer</button>
-                </div>
+                <h3 class="popup-title">${this.title}</h3>
+                <p><strong>Type :</strong> ${this.type}</p>
+                <p>${this.summary}</p>
+                <button onclick="removeMarker(${this.id})">Supprimer</button>
             </div>
         `;
     }
 
     // Supprimer le marqueur de la carte
     remove() {
-        this.map.removeLayer(this.marker);
+        this.marker.remove();
     }
 }
