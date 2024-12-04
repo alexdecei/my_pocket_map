@@ -74,7 +74,7 @@ fetch('markers.json')
     .then(data => {
         // Parcourir les marqueurs et les ajouter à la carte
         data.forEach(markerData => {
-            addMarker(markerData.lat, markerData.lng, markerData.info);
+            addMarker(map, markerData.lat, markerData.lng, markerData.info);
         });
     })
     .catch(error => {
