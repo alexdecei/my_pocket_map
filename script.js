@@ -6,6 +6,11 @@ const form = document.getElementById('marker-form');
 const cancelButton = document.getElementById('cancel-button');
 const saveButton = document.getElementById('save-button');
 
+// une référence globale pour suivre le marqueur en cours d’édition
+export const markerState = {
+    markerBeingEdited: null
+};
+
 
 // Ouvrir la modale
 function openModal() {
@@ -36,23 +41,43 @@ map.fitBounds(bounds);
 map.on('dblclick', function (e) {
     const coords = e.latlng;
 
-    // Ouvrir la modale pour saisir les informations du nouveau marqueur
+    // Ouvrir la modale pour saisir les infos
     openModal();
 
     // Gérer la soumission du formulaire
     form.onsubmit = function (event) {
         event.preventDefault(); // Empêcher le rechargement de la page
-
+    
         // Récupérer les valeurs saisies
         const title = document.getElementById('marker-title').value;
         const type = document.getElementById('marker-type').value;
         const summary = document.getElementById('marker-summary').value;
-
-        // Ajouter un nouveau marqueur avec les informations fournies
-        addMarker(map, coords.lat, coords.lng, title, type, summary);
-
-        // Fermer la modale
+    
+        if (markerState.markerBeingEdited) {
+            // Modifier les informations du marqueur
+            markerState.markerBeingEdited.title = title;
+            markerState.markerBeingEdited.type = type;
+            markerState.markerBeingEdited.summary = summary;
+    
+            // Mettre à jour la popup du marqueur
+            markerState.markerBeingEdited.marker.bindPopup(markerState.markerBeingEdited.createPopupContent());
+    
+            console.log(`Marqueur ${markerState.markerBeingEdited.id} modifié.`);
+        } else {
+            // Ajouter un nouveau marqueur
+            addMarker(map, coords.lat, coords.lng, title, type, summary);
+        }
+    
+        // Fermer la modale et réinitialiser l'état
         closeModal();
+        markerState.markerBeingEdited = null;
+    };
+    
+
+    // Gérer le bouton d'annulation
+    cancelButton.onclick = function () {
+        closeModal();
+        markerState.markerBeingEdited = null;
     };
 });
 
