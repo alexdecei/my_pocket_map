@@ -7,7 +7,7 @@ const cancelButton = document.getElementById('cancel-button');
 const saveButton = document.getElementById('save-button');
 
 // une référence globale pour suivre le marqueur en cours d’édition
-export const markerBeingEdited = null;
+export let markerBeingEdited = null;
 
 // Ouvrir la modale
 function openModal() {
