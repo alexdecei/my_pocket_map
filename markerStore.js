@@ -1,5 +1,5 @@
 import { Marker } from './marker.js';
-import { map, markerState } from './script.js';
+import { map, markerState, openModal } from './script.js';
 
 const markerStore = [];
 
