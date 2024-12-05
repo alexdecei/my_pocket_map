@@ -3,159 +3,79 @@
       "id": 1733347184523,
       "lat": 2488,
       "lng": 2268,
-      "title": "Marqueur 1",
-      "type": "boss",
-      "summary": "Un ennemi puissant à affronter."
+      "title": "Col des titans",
+      "type": "lieu",
+      "summary": "Frontière avec les archipels, sur tout le nord"
     },
     {
       "id": 1733347184524,
       "lat": 1032,
       "lng": 4960,
-      "title": "Marqueur 2",
+      "title": "Région du sommeil",
       "type": "lieu",
-      "summary": "Un endroit mystérieux à explorer."
+      "summary": "Danger, accès interdit"
     },
     {
       "id": 1733347184524,
       "lat": 1500,
       "lng": 2680,
-      "title": "Marqueur 3",
-      "type": "événement",
-      "summary": "Un lieu où un événement significatif s'est produit."
+      "title": "Tour monde",
+      "type": "défi",
+      "summary": "la grande tour monde dans laquelle les aventuriers se battent et s'entrainent"
     },
     {
       "id": 1733347184524,
       "lat": 824,
       "lng": 4228,
-      "title": "Marqueur 4",
+      "title": "Farosgnosis",
       "type": "ville",
-      "summary": "Un lieu habité avec une riche histoire."
+      "summary": "La ville du savoir."
     },
     {
       "id": 1733347184524,
       "lat": 584,
       "lng": 2388,
-      "title": "Marqueur 5",
-      "type": "événement",
-      "summary": "Un lieu où un événement significatif s'est produit."
+      "title": "Ka moeana",
+      "type": "ville",
+      "summary": "Capitale Moana."
     },
     {
       "id": 1733347184525,
       "lat": 1532,
       "lng": 4804,
-      "title": "Marqueur 6",
-      "type": "événement",
-      "summary": "Un lieu où un événement significatif s'est produit."
+      "title": "Porte brute",
+      "type": "inconnu",
+      "summary": "On parle d'un lieu fortement chargé en Miori brut."
     },
     {
       "id": 1733347184525,
       "lat": 2224,
       "lng": 4940,
-      "title": "Marqueur 7",
-      "type": "boss",
-      "summary": "Un ennemi puissant à affronter."
+      "title": "Conflit",
+      "type": "événement",
+      "summary": "Elerwud est le théatre d'un conflit pour des ressources."
     },
     {
       "id": 1733347184525,
       "lat": 1788,
       "lng": 2672,
-      "title": "Marqueur 8",
-      "type": "événement",
-      "summary": "Un lieu où un événement significatif s'est produit."
+      "title": "Kvisha",
+      "type": "défi",
+      "summary": "Une puissance sommeille dans cette région."
     },
     {
       "id": 1733347184525,
       "lat": 928,
       "lng": 692,
-      "title": "Marqueur 9",
-      "type": "ville",
-      "summary": "Un lieu habité avec une riche histoire."
-    },
-    {
-      "id": 1733347184525,
-      "lat": 2264,
-      "lng": 2848,
-      "title": "Marqueur 10",
-      "type": "ville",
-      "summary": "Un lieu habité avec une riche histoire."
-    },
-    {
-      "id": 1733347184525,
-      "lat": 880,
-      "lng": 2684,
-      "title": "Marqueur 11",
-      "type": "trésor",
-      "summary": "Un trésor caché regorgeant de richesses."
-    },
-    {
-      "id": 1733347184526,
-      "lat": 1276,
-      "lng": 2500,
-      "title": "Marqueur 12",
-      "type": "trésor",
-      "summary": "Un trésor caché regorgeant de richesses."
-    },
-    {
-      "id": 1733347184526,
-      "lat": 1832,
-      "lng": 4304,
-      "title": "Marqueur 13",
-      "type": "ville",
-      "summary": "Un lieu habité avec une riche histoire."
-    },
-    {
-      "id": 1733347184526,
-      "lat": 724,
-      "lng": 1792,
-      "title": "Marqueur 14",
-      "type": "lieu",
-      "summary": "Un endroit mystérieux à explorer."
-    },
-    {
-      "id": 1733347184526,
-      "lat": 1696,
-      "lng": 3748,
-      "title": "Marqueur 15",
-      "type": "événement",
-      "summary": "Un lieu où un événement significatif s'est produit."
-    },
-    {
-      "id": 1733347184526,
-      "lat": 656,
-      "lng": 3460,
-      "title": "Marqueur 16",
-      "type": "trésor",
-      "summary": "Un trésor caché regorgeant de richesses."
-    },
-    {
-      "id": 1733347184526,
-      "lat": 1776,
-      "lng": 3168,
-      "title": "Marqueur 17",
-      "type": "ville",
-      "summary": "Un lieu habité avec une riche histoire."
-    },
-    {
-      "id": 1733347184526,
-      "lat": 2120,
-      "lng": 744,
-      "title": "Marqueur 18",
-      "type": "lieu",
-      "summary": "Un endroit mystérieux à explorer."
-    },
-    {
-      "id": 1733347184526,
-      "lat": 1064,
-      "lng": 3212,
-      "title": "Marqueur 19",
-      "type": "lieu",
-      "summary": "Un endroit mystérieux à explorer."
+      "title": "Sibnele",
+      "type": "défi",
+      "summary": "Titan inactif, à l'état de mort."
     },
     {
       "id": 1733347184526,
       "lat": 452,
       "lng": 2984,
-      "title": "Marqueur 20",
+      "title": "héritage des enchanteurs",
       "type": "trésor",
       "summary": "Un trésor caché regorgeant de richesses."
     }
