@@ -1,80 +1,72 @@
 [
   {
-    "id": 1733401041747,
-    "lat": 2703.869391565149,
-    "lng": 2688,
-    "title": "Col des titans",
-    "type": "lieu",
-    "summary": "Frontière avec les archipels, sur tout le nord"
-  },
-  {
-    "id": 1733401041748,
-    "lat": 1687.6033373460073,
-    "lng": 2680,
+    "id": 1733999724237,
+    "lat": 1797.0018140060397,
+    "lng": 4236,
     "title": "Région du sommeil",
     "type": "lieu",
     "summary": "Danger, accès interdit"
   },
   {
-    "id": 1733401041748,
-    "lat": 2583.3421204763044,
-    "lng": 1544,
+    "id": 1733999724237,
+    "lat": 2631.9709759033663,
+    "lng": 3496,
     "title": "Tour monde",
     "type": "défi",
     "summary": "la grande tour monde dans laquelle les aventuriers se battent et s'entrainent"
   },
   {
-    "id": 1733401041748,
-    "lat": 1287.7194337325418,
-    "lng": 944,
+    "id": 1733999724237,
+    "lat": 1587.9879066264027,
+    "lng": 3317,
     "title": "Farosgnosis",
     "type": "ville",
     "summary": "La ville du savoir."
   },
   {
-    "id": 1733401041749,
-    "lat": 232.21284337531324,
-    "lng": 352,
+    "id": 1733999724237,
+    "lat": 789.0356754521122,
+    "lng": 1357,
     "title": "Ka moeana",
     "type": "ville",
     "summary": "Capitale Moana."
   },
   {
-    "id": 1733401041749,
-    "lat": 528.6046686798672,
-    "lng": 2080,
+    "id": 1733999724237,
+    "lat": 2205.972185240726,
+    "lng": 2802,
     "title": "Porte brute",
     "type": "inconnu",
     "summary": "On parle d'un lieu fortement chargé en Miori brut."
   },
   {
-    "id": 1733401041749,
-    "lat": 992.7449518135963,
-    "lng": 3032,
+    "id": 1733999724237,
+    "lat": 1200.4803482679042,
+    "lng": 4634,
     "title": "Conflit",
     "type": "événement",
     "summary": "Elerwud est le théatre d'un conflit pour des ressources."
   },
   {
-    "id": 1733401041749,
-    "lat": 1280.3047530146528,
-    "lng": 4664,
+    "id": 1733999724237,
+    "lat": 1123.0078606928382,
+    "lng": 6241,
     "title": "Kvisha",
     "type": "défi",
     "summary": "Une puissance sommeille dans cette région."
   },
   {
-    "id": 1733401041749,
-    "lat": 2287.177650595381,
-    "lng": 5728,
+    "id": 1733999724237,
+    "lat": 2496.0435361449504,
+    "lng": 416,
     "title": "Sibnele",
     "type": "défi",
     "summary": "Titan inactif, à l'état de mort."
   },
   {
-    "id": 1733401041750,
-    "lat": 1375.4388674650831,
-    "lng": 1744,
+    "id": 1733999724237,
+    "lat": 1543.8984156617823,
+    "lng": 1592,
     "title": "héritage des enchanteurs",
     "type": "trésor",
     "summary": "Un trésor caché regorgeant de richesses."
